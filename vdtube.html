@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vdtube.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+    body{
+        background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/03/Photo-image-dark-wallpaper.png");
+        overflow-x: hidden;
+    }
+    .navbar{
+        width:100%;
+        height:8vh;
+        background:rgb(38, 36, 41);
+        display: flex;
+        justify-content: space-between;
+       color:white;
+        box-shadow: 0 5px 5px 2px grey;
+        position:sticky;
+        top:0;
+        z-index: 10;
+    }
+    .fa-bars{
+        color:white;
+        width:25px;
+        cursor: pointer;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        margin:10px
+    }
+    .logo img, .navcontent .login{
+        width: 40px;
+        height: 40px;
+       
+        margin-right: 10px;
+    }
+    .logo h3{
+        margin-left: 5px;
+    }
+    .navcontent{
+        display: flex;
+        align-items: center;
+    }
+    .navcontent input{
+        width:500px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid rgb(13, 224, 243);
+        border-radius: 10px;
+        margin-right: 10px;
+        background: transparent;
+        color:aqua;
+        transition: 0.5s ease-in;
+    }
+    .navcontent input:hover{
+        background-color: antiquewhite;
+        transform: scale(1.1);
+    }
+    .fa-magnifying-glass,.fa-microphone{
+        margin-right: 10px;
+        color:rgb(226, 228, 239);
+        cursor: pointer;
+    }
+    .main{
+       display: flex;
+      
+    }
+    .sidebar{
+       height:100vh;
+       width:15%;
+      border-right: 1px solid white;
+       background:transparent;
+       text-align: center;
+       box-shadow:  2px  white;
+       
+       position:fixed
+       
+    }
+    
+    .sidebar a{
+        display: flex;
+        text-decoration: none;
+        color:white;
+        padding:15px;
+       margin-bottom:7px;
+       margin-left: 35px;
+     
+    }
+    .sidebar a:first-child{
+        color:orangered
+    }
+    .main .sidebar i{
+        margin-right: 5px;
+    }
+    .sidebar .subscription{
+     color:orangered;
+     text-align: start;
+     margin-left: 47px;
+     margin-bottom: 15px;
+     
+        
+    }
+    .sidebar .subscribed{
+        color:white;
+        display: flex;
+        margin-bottom:35px;
+        margin-top: 10px;
+        margin-left: 35px;
+        align-items: center;
+    }
+    .login{
+        height:70px;
+        width: 70px;
+        border-radius: 50%;
+        cursor:pointer;
+    }
+    .sidebar .subscribed p{
+        margin-left: 10px;
+        cursor:pointer;
+    }
+    .sidechange{
+        display: none;
+       
+    }
+    .content{
+        position:relative;
+        top:37px;
+        left:255px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+    .content .maincontent img{
+        width:300px;
+        height:200px;
+        transition: 0.5s;
+    }
+    .content .maincontent img:hover{
+        transform: scale(1.1);
+    }
+    .content .maincontent .description{
+        display: flex;
+        align-items: center;
+        color:rgb(232, 16, 240);
+        margin-top: 10px;
+    }
+    .content .maincontent .description img{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+       
+    }
+    .content .maincontent .description p{
+        margin: 5px;
+    }
+    .content-change{
+        position:relative;
+        margin-left:-235px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+</style>
+
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-bars" onclick="hide()"></i>
+            <img src="C:\Users\PRATYUSH SARKAR\Downloads\learning\vdlogo-removebg-preview.png" alt="">
+            <h3>VdTube</h3>
+        </div>
+        <div class="navcontent">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-microphone"></i>
+            <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\225779.jpg" alt="" class="login">
+        </div>
+    </nav>
+    <!--sidebar-->
+    <div class="main">
+        <div class="sidebar" id="side">
+            <a href=""><i class="fa-solid fa-house"></i><p>Home</p></a>
+            <a href=""><i class="fa-sharp fa-solid fa-circle-info"></i><p>About</p></a>
+            <a href=""><i class="fa-solid fa-video"></i><p>Watched Videos</p></a>
+            <a href=""><i class="fa-solid fa-bookmark"></i><p>Save</p></a>
+            <a href=""><i class="fa-solid fa-download"></i><p>Download</p></a>
+           <p class="subscription">Subscription</p>
+            <div class="subscribed">
+                 <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\230817.jpg" alt="" class="login">
+                 <p>Mystyle</p> 
+            </div>
+           
+            <div class="subscribed">
+                 <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="" class="login">
+                <p>Herstyle</p>
+            </div>
+            <div class="subscribed">
+                 <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Screenshots\guiter.gif "alt="" class="login">
+                <p> hisstyle</p>
+            </div>
+            <a href=""><i class="fa-solid fa-right-from-bracket"></i><p>Log Out</p></a>
+            
+        </div>
+
+        <div class="content" id="content">
+            <div class="maincontent">
+                <div class="image">
+                   <a href="nextpage.html"><img src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Image 2023-06-14 at 14.46.35.jpeg" alt=""></a> 
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p> <b>comodo dragon<br>2k views &bull;2 years ago</b></p>
+                  
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="image">
+                    <img src="https://im.rediff.com/movies/2021/jan/07vijay-the-master.jpg?w=670&h=900" alt="">
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p> <b>Thalapathy Vijay's Master<br>286k views</b> &bull;2 years ago</p>
+                  
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="image">
+                    <img src="https://img.gurugamer.com/resize/740x-/2020/07/13/tanhaji-movie-download-trailer-posters-release-dat-a175.jpg" alt="">
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p> <b> Ajay Devgan|Kajol|Saif Ali Khan<br>316</b>k views &bull;2 years ago</p>
+                  
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="image">
+                    <img src="https://www.godownloadmovies.com/wp-content/uploads/2021/01/Endless.jpg" alt="">
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p><b> Endless <br>56k views &bull;2 years ago</b></p>
+                  
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="image">
+                    <img src="https://i0.wp.com/www.newsbugz.com/wp-content/uploads/2021/08/ganapath.jpg?resize=768%2C1119&ssl=1" alt="">
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p><b> Ganpath teaser|| <br>126k views &bull;4 min ago</b>o</p>
+                  
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="image">
+                    <img src="https://blogtobollywood.com/wp-content/uploads/2016/12/Raees-New-Poster-768x1024.jpg" alt="">
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p><b>Shah Rukh Khan's raees <br>756k views &bull;6 years ag</b>o</p>
+                  
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="image">
+                    <img src="https://i.pinimg.com/originals/50/54/16/505416aa2976c6ba2e52ced5267b93f8.jpg" alt="">
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p><b> Spell Bound <br>6k views &bull;2 years ag</b>o</p>
+                  
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="image">
+                    <img src="https://wallpapercave.com/wp/wp8807385.jpg" alt="">
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p><b> Arjun Kapoor's 2 state <br>516k views &bull;2 years ag</b>o</p>
+                  
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="image">
+                    <img src="https://www.pensivly.com/wp-content/uploads/2019/12/1576268715_maxresdefault-1024x576.jpg" alt="">
+                </div>
+                <div class="description">
+                    <img src="C:\Users\PRATYUSH SARKAR\OneDrive\Pictures\Camera imports\2023-01-03\40723.jpg" alt="">
+                    <p><b>Savyasachi|Naga chaitanya|nidhi|R Madhavan <br>56k views &bull;2 years ag</b>o</p>
+                  
+                </div>
+            </div>
+           
+           
+           
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+       function hide(){
+        var sidebar=document.getElementById("side")
+        var content=document.getElementById("content")
+        sidebar.classList.toggle("sidechange");
+        content.classList.toggle("content-change")
+
+       }
+       
+    </script>
+</body>
+</html>

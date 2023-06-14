@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nextpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: rgb(12, 12, 33);
+    }
+    
+    .container {
+        display: flex;
+    }
+    
+    .container .vd {
+        width: 80%;
+        height: auto;
+        margin: 10px;
+    
+    }
+    
+    .container .vd video {
+        width: 100%;
+        height: auto;
+        box-shadow: 4px 2px 2px 0 white
+    }
+    
+    .container .othervideo .videos {
+        height: 220px;
+        width: 300px;
+        margin: 10px;
+        margin-bottom: 20px;
+        border: none;
+        box-shadow: 4px 2px 2px 0 white;
+        color: white
+    }
+    
+    .container .othervideo .videos video {
+        width: 300px;
+        height: auto;
+    
+    
+    }
+    
+    .container .vd a {
+        color: aliceblue;
+        text-decoration: none;
+    }
+    
+    .container .vd h3,
+    h4 {
+        line-height: 2rem;
+        color: white;
+    }
+    
+    .icons {
+        color: white;
+        display: flex;
+        margin-top: 10px;
+        font-size: xx-large;
+    }
+    
+    .icons p {
+        margin-right: 20px;
+    }
+    
+    .icons i {
+        margin-right: 10px;
+    }
+    
+    .dp-sec,
+    .leftcontent {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    
+    .dp {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    
+        margin-right: 5px;
+    }
+    .dp-sec .rightcontent button{
+        width:200px;
+        height:50px;
+        border-radius: 20px;
+        background: transparent;
+        border: 1px solid red;
+        color:red;
+        transition: 0.5s ease-in;
+    }
+    .dp-sec .rightcontent button:hover{
+        transform: scale(1.1);
+        background-color: red;
+        color:white;
+        font-size: x-large;
+        cursor: pointer;
+    }
+    hr{
+        margin-top: 10px;
+    }
+    .comments{
+        margin-top: 15px;
+    }
+    .firstcomment{
+        display: flex;
+        align-items: center;
+    }
+    .firstcomment input{
+        margin-left: 15px;
+        width:80%;
+        height:30px;
+        border-radius: 20px;
+        background: transparent;
+        color:white;
+        padding-left: 5px;
+        border:1px solid white
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="vd">
+            <video controls autoplay>
+                <source src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Video 2023-06-14 at 10.09.33 (1).mp4">
+            </video>
+            <a href="">#WildLife</a>
+            <a href="">#AnimalWorld</a>
+            <a href="">#LivingBeing</a>
+            <a href="">#NatureBeauty</a>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus adipisci expedita velit ab rerum
+                voluptates exercitationem obcaecati.</h3>
+            <h4>2k views &bull; 2 years ago</h2>
+                <div class="icons">
+                    <i class="fa-regular fa-thumbs-up" id="like" onclick="likes()"></i>
+                    <p id="likenum">0</p>
+                    <i class="fa-regular fa-thumbs-down" id="dislike" onclick="dislikes()"></i>
+                    <p id="dislikenum">0</p>
+                    <i class="fa-solid fa-share"></i>
+                    <p>Share</p>
+                </div>
+                <hr>
+                <div class="dp-sec">
+                    <div class="leftcontent">
+                        <img src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Image 2023-06-14 at 14.46.35.jpeg" alt="" class="dp">  
+                        <div class="dp-text">
+                        <h3>Wildlife</h3>
+                        <h4 id="subscriber" >330 subscribers</h4>
+                        </div>
+                    </div>
+                    <div class="rightcontent">
+                        <button id="btn" onclick="subscribed()">Subscribe</button>
+                    </div>
+                    
+                </div>
+                <hr>
+           
+
+                <div class="comments">
+                    <div class="firstcomment">
+                        <img src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Image 2023-06-14 at 14.46.35.jpeg" alt="" class="dp">  
+                        <input type="text" placeholder="Add a comment....">
+                    </div>
+                    
+                </div>
+
+
+
+
+
+        </div>
+        <div class="othervideo">
+            <div class="videos">
+                <video controls autoplay>
+                    <source src="C:\Users\PRATYUSH SARKAR\Downloads\learning\dog.mp4">
+                </video>
+                <p>Treatment of dog | 18s video</p>
+                <p>5 min ago &bull; watch this</p>
+            </div>
+            <div class="videos">
+                <video controls autoplay>
+                    <source src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Video 2023-06-14 at 14.47.39.mp4">
+                </video>
+                <p>lion life | 37s video</p>
+                <p>4 min ago &bull; watch this</p>
+            </div>
+            <div class="videos">
+                <video controls autoplay>
+                    <source
+                        src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Video 2023-06-14 at 14.47.46 (1).mp4">
+                </video>
+                <p>Earth Surface | 20s video</p>
+                <p>5 min ago &bull; watch this</p>
+            </div>
+            <div class="videos">
+                <video controls autoplay>
+                    <source src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Video 2023-06-14 at 14.47.46.mp4">
+                </video>
+                <p>Cat in the box | 17s video</p>
+                <p>8 min ago &bull; watch this</p>
+            </div>
+            <div class="videos">
+                <video controls autoplay>
+                    <source
+                        src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Video 2023-06-14 at 10.09.33 (1).mp4">
+                </video>
+                <p>Comodo dragon | 30s video</p>
+                <p>55s ago &bull; watch this</p>
+            </div>
+            <div class="videos">
+                <video controls autoplay>
+                    <source
+                        src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Video 2023-06-14 at 14.47.46 (1).mp4">
+                </video>
+                <p>Earth surface | 20s video</p>
+                <p>3 min ago &bull; watch this</p>
+            </div>
+            <div class="videos">
+                <video controls autoplay>
+                    <source src="C:\Users\PRATYUSH SARKAR\Downloads\learning\dog.mp4">
+                </video>
+                <p>Treatment of dog | 18s video</p>
+                <p>5 min ago &bull; watch this</p>
+            </div>
+            <div class="videos">
+                <video controls autoplay>
+                    <source src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Video 2023-06-14 at 14.47.46.mp4">
+                </video>
+                <p>Cat in the box | 17s video</p>
+                <p>8 min ago &bull; watch this</p>
+            </div>
+            <div class="videos">
+                <video controls autoplay>
+                    <source src="C:\Users\PRATYUSH SARKAR\Downloads\learning\WhatsApp Video 2023-06-14 at 14.47.39.mp4">
+                </video>
+                <p>The lion family | 37s video</p>
+                <p>5 min ago &bull; watch this</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      
+        function likes(){
+          
+            document.getElementById("likenum").innerHTML="1";
+            document.getElementById("dislikenum").innerHTML="0"
+        }
+        function dislikes(){
+            document.getElementById("likenum").innerHTML="0";
+            document.getElementById("dislikenum").innerHTML="1"
+        }
+        function subscribed(){
+            document.getElementById("btn").innerText="Subscribed";
+            document.getElementById("subscriber").innerText="331 subscribers"
+        }
+       
+    </script>
+</body>
+
+</html>
